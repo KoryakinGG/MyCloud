@@ -1,0 +1,58 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.text.Text?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="ru.geekbrains.koryakin.cloud.client.Controller"
+          stylesheets="common.css" id="body">
+    <VBox fx:id="authScreen">
+        <HBox styleClass="authPanelElement">
+            <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="Login"/>
+        </HBox>
+        <HBox styleClass="authPanelElement">
+            <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="Password"/>
+        </HBox>
+        <HBox fx:id="accessDeniedNotice" styleClass="authPanelElement">
+            <Text>Invalid login or password</Text>
+        </HBox>
+        <HBox styleClass="authPanelElement">
+            <Button text="Sign in" onAction="#signIn"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="mainScreen">
+        <HBox id="tablePanel">
+            <TableView fx:id="fileTable">
+                <columns>
+                    <TableColumn fx:id="fileNameColumn" text="File name"/>
+                    <TableColumn fx:id="fileSizeColumn" text="Size"/>
+                    <TableColumn fx:id="localFlagColumn" text="Local"/>
+                    <TableColumn fx:id="remoteFlagColumn" text="Remote"/>
+                </columns>
+            </TableView>
+        </HBox>
+        <HBox id="bottomPanel">
+            <VBox>
+                <Button onAction="#uploadFile" text="Upload new file"/>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS"/>
+            <VBox>
+                <HBox id="tableButtonsPanel">
+                    <VBox styleClass="tableButton">
+                        <Button fx:id="downloadFile" onAction="#downloadFile" text="Download"/>
+                    </VBox>
+                    <VBox styleClass="tableButton">
+                        <Button fx:id="deleteLocalFile" onAction="#deleteLocalFile" text="Keep remote only"/>
+                    </VBox>
+                    <VBox styleClass="tableButton">
+                        <Button fx:id="deleteFile" onAction="#deleteFile" text="Delete everywhere"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</GridPane>

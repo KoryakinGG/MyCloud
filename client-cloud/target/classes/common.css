@@ -1,0 +1,23 @@
+#body {
+    -fx-pref-height: 400;
+    -fx-pref-width: 562;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+#authScreen { -fx-padding: 100 160; }
+.authPanelElement { -fx-padding: 10 0 0 0; -fx-alignment: center; }
+
+#mainScreen { -fx-alignment: center; }
+
+#fileTable { -fx-pref-width: 540; }
+#fileNameColumn { -fx-pref-width: 320; }
+#fileSizeColumn { -fx-pref-width: 100; }
+#localFlagColumn { -fx-pref-width: 60; -fx-alignment: center; }
+#remoteFlagColumn { -fx-pref-width: 60; -fx-alignment: center; }
+
+#bottomPanel { -fx-padding: 10 0 0 0; }
+
+.tableButton { -fx-padding: 0 0 0 10; }
