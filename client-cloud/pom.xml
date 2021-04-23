@@ -13,9 +13,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>ru.vdovgopyaty</groupId>
+            <groupId>freebxml</groupId>
             <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.9.1.3</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -42,7 +42,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ru.vdovgopyaty.cloud.client.Main</mainClass>
+                            <mainClass>ru.geekbrains.koryakin.cloud.client.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -56,7 +56,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ru.vdovgopyaty.cloud.client.Main</mainClass>
+                            <mainClass>ru.geekbrains.koryakin.cloud.client.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
